@@ -18,3 +18,12 @@ o1与o2结合生成新的Observable,结合的规则是o1发送时，检查o2上�
 concat(Observable<? extends Observable<? extends T>> observables)  
   
 连击多个observabale,按顺序发送
+
+![concat](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/concat.png)
+
+##defer
+public static <T> Observable<T> defer(Func0<Observable<T>> observableFactory)  
+  
+在创建Observable对象时不执行observableFactory的相关初始化代码，在subscribe时才执行  
+
+![defer](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/defer.png)
