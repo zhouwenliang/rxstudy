@@ -14,3 +14,7 @@ o1与o2结合生成新的Observable,结合的规则是o1发送时，检查o2上�
 
 ![combineLatest](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/combineLatest.png)
 
+##concat
+concat(Observable<? extends Observable<? extends T>> observables)  
+  
+连击多个observabale,按顺序发送
