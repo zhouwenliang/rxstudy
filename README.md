@@ -27,3 +27,10 @@ public static <T> Observable<T> defer(Func0<Observable<T>> observableFactory)
 在创建Observable对象时不执行observableFactory的相关初始化代码，在subscribe时才执行  
 
 ![defer](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/defer.png)
+
+##empty
+public static <T> Observable<T> empty()  
+  
+发送一个空的Observable  
+
+![empty](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/empty.png)
