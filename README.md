@@ -34,3 +34,40 @@ public static <T> Observable<T> empty()
 发送一个空的Observable  
 
 ![empty](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/empty.png)
+
+##error
+public static <T> Observable<T> error(java.lang.Throwable exception) 
+ 
+  
+发送一个onError给subscriber  
+
+![error](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/error.png)
+
+##from
+public static <T> Observable<T> from(java.util.concurrent.Future<? extends T> future,Scheduler scheduler)  
+  
+将一个Feture类型发出，发出时先调用Feture的get方法返回发出的内容  
+  
+![from](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/from.Future.s.png)
+  
+public static <T> Observable<T> from(java.lang.Iterable<? extends T> iterable)  
+
+将一个Iterable及Array类型发出，依次将里面的Item发出  
+  
+![from](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/from.png)
+
+##fromCallable
+public static <T> Observable<T> fromCallable(java.util.concurrent.Callable<? extends T> func)  
+  
+将Callable的get返回的结果发出  
+  
+![fromCallable](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/fromCallable.png) 
+  
+##interval
+public static Observable<java.lang.Long> interval(long interval,
+java.util.concurrent.TimeUnit unit)  
+  
+每隔一段时间发出一段连续的数字  
+  
+![interval](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/interval.png)
+  
