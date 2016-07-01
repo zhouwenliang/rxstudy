@@ -76,4 +76,24 @@ public static <T> Observable<T> just(T t1,T t2)
   
 按照顺序发送1~n个对象  
   
-![just](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/just.m.png)
+![just](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/just.m.png)  
+  
+##merge  
+public static <T> Observable<T> merge(java.lang.Iterable<? extends Observable<? extends T>> sequences)  
+  
+将多个Observable和并成一个Observable发出，合并的规则是按照各个Observable发出的顺序进行合并，以最早结束的Observable作结束  
+  
+![merge](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/merge.png)  
+  
+public static <T> Observable<T> merge(Observable<? extends Observable<? extends T>> source)  
+  
+将一个含有多个Observables的Observable中的所有的元素进行合并，依次发出合并的内容  
+  
+![merge](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/merge.oo.png)
+  
+##mergeDelayError
+public static <T> Observable<T> mergeDelayError(java.lang.Iterable<? extends Observable<? extends T>> sequences)  
+  
+merge过程中如果遇到error，暂不抛出，等到所有元素合并完才在最后抛出  
+  
+![mergeDelayError](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/mergeDelayError.png)
