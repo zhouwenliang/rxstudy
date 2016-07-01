@@ -70,4 +70,10 @@ java.util.concurrent.TimeUnit unit)
 每隔一段时间发出一段连续的数字  
   
 ![interval](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/interval.png)
+
+##just
+public static <T> Observable<T> just(T t1,T t2)  
   
+按照顺序发送1~n个对象  
+  
+![just](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/just.m.png)
