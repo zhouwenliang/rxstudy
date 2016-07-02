@@ -131,4 +131,10 @@ public static <T> Observable<T> switchOnNext(Observable<? extends Observable<? e
   
 连接2个及以上的Observable到一个Observable，连接的规则是后面的Observable开始发射后，前面的Observable后面的Item就不再发送  
   
-![switchOnNext](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/switchDo.png)
+![switchOnNext](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/switchDo.png)  
+  
+##switchOnNextDelayError
+public static <T> Observable<T> switchOnNextDelayError(Observable<? extends Observable<? extends T>> sequenceOfSequences)  
+  
+与switchOnNext一样，不过在中途遇到异常在结束后才抛出  
+  
