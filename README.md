@@ -138,3 +138,11 @@ public static <T> Observable<T> switchOnNextDelayError(Observable<? extends Obse
   
 与switchOnNext一样，不过在中途遇到异常在结束后才抛出  
   
+##timer  
+public static Observable<java.lang.Long> timer(long initialDelay,
+                                          long period,
+                                          java.util.concurrent.TimeUnit unit)  
+  
+每隔一段时间就发送一次元素，元素从0开始
+  
+![timer](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/timer.p.png)
