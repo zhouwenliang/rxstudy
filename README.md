@@ -110,4 +110,25 @@ public static <T> Observable<T> never()
   
 不发送任何东西  
   
-![never](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/never.png)
+![never](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/never.png)  
+  
+##range
+public static Observable<java.lang.Integer> range(int start,int count)  
+  
+从start开始发送，一直发送到start + count - 1  
+  
+![range](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/range.png)  
+  
+##sequenceEqual  
+public static <T> Observable<java.lang.Boolean> sequenceEqual(Observable<? extends T> first,Observable<? extends T> second)  
+  
+对比两个Observable中的Item,如果Item的个数及内容一样，就返回一个Observable<Boolean>为true的类型，否则返回false类型，返回的时机是遇到第一个不相等的元素  
+  
+![sequenceEqual](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/sequenceEqual.png)  
+
+##switchOnNext  
+public static <T> Observable<T> switchOnNext(Observable<? extends Observable<? extends T>> sequenceOfSequences)  
+  
+连接2个及以上的Observable到一个Observable，连接的规则是后面的Observable开始发射后，前面的Observable后面的Item就不再发送  
+  
+![switchOnNext](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/switchDo.png)
