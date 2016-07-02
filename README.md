@@ -103,4 +103,11 @@ public final Observable<Observable<T>> nest()
   
 将Observable<T>类型封装为Observable<Observable<T>>对象  
   
-![nest](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/nest.png)
+![nest](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/nest.png)  
+  
+##never
+public static <T> Observable<T> never()  
+  
+不发送任何东西  
+  
+![never](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/never.png)
