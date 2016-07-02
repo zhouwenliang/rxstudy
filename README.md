@@ -97,3 +97,10 @@ public static <T> Observable<T> mergeDelayError(java.lang.Iterable<? extends Obs
 merge过程中如果遇到error，暂不抛出，等到所有元素合并完才在最后抛出  
   
 ![mergeDelayError](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/mergeDelayError.png)
+  
+##nest
+public final Observable<Observable<T>> nest()  
+  
+将Observable<T>类型封装为Observable<Observable<T>>对象  
+  
+![nest](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/nest.png)
