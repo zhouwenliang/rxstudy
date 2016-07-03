@@ -252,4 +252,12 @@ public final <R> Observable<R> collect(Func0<R> stateFactory,
   
 将发送的元素通过collector收集起来，与下一个发送的元素结合，最后发送一个集合  
   
-![](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/collect.png)
+![](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/collect.png)  
+  
+##concatMap  
+public final <R> Observable<R> concatMap(Func1<? super T,? extends Observable<? extends R>> func)  
+  
+将当前Observable中的元素通过func转化成Observable，并把转化后的每个Observable按照顺序发射到一个Observable中  
+  
+![concatMap](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/concatMap.png)  
+  
