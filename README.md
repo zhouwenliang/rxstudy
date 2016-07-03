@@ -261,3 +261,12 @@ public final <R> Observable<R> concatMap(Func1<? super T,? extends Observable<? 
   
 ![concatMap](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/concatMap.png)  
   
+##concatWith
+public final Observable<T> concatWith(Observable<? extends T> t1)  
+  
+将当前的Observable与参数中的Observable相连接  
+  
+![concatWith](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/concat.png)  
+  
+  
+  
