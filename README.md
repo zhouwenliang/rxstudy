@@ -275,5 +275,10 @@ public final Observable<java.lang.Boolean> contains(java.lang.Object element)
   
 ![contains](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/contains.png)  
   
+##count/countLong  
+public final Observable<java.lang.Integer> count()  
   
+返回Observable中的元素个数  
+  
+![count](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/count.png) 
   
