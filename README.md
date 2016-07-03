@@ -177,4 +177,10 @@ public final Observable<java.lang.Boolean> all(Func1<? super T,java.lang.Boolean
   
 ![all](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/all.png)  
   
+##ambWith  
+public final Observable<T> ambWith(Observable<? extends T> t1)  
+  
+将当前的Observable与参数中的比较，返回先发射出的Observable  
+  
+![ambWith](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/amb.png)
 
