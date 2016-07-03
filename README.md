@@ -225,3 +225,16 @@ public final <TOpening,TClosing> Observable<java.util.List<T>> buffer(Observable
 将一个发射多个元素的Observable拆分成多个发送元素List的Observable，拆分的开始由bufferOpenings的Observable决定，拆分的结束由bufferClosingSelector的Observable决定  
   
 ![buffer](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/buffer2.png) 
+  
+public final <B> Observable<java.util.List<T>> buffer(Observable<B> boundary)  
+  
+将一个发射多个元素的Observable拆分成多个发送元素List的Observable，拆分的边界由boundary决定  
+  
+![buffer](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/buffer2.png) 
+  
+##cache
+public final Observable<T> cache()  
+  
+订阅前已经发送过的元素在订阅后也会发射  
+  
+![cache](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/cache.png) 
