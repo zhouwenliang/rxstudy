@@ -81,7 +81,7 @@ public static <T> Observable<T> just(T t1,T t2)
 ##merge  
 public static <T> Observable<T> merge(java.lang.Iterable<? extends Observable<? extends T>> sequences)  
   
-将多个Observable和并成一个Observable发出，合并的规则是按照各个Observable发出的顺序进行合并，以最早结束的Observable作结束  
+将多个Observable和并成一个Observable发出，合并的规则是按照各个Observable发出的顺序进行合并，中途遇到异常则直接抛出
   
 ![merge](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/merge.png)  
   
@@ -145,4 +145,27 @@ public static Observable<java.lang.Long> timer(long initialDelay,
   
 每隔一段时间就发送一次元素，元素从0开始
   
-![timer](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/timer.p.png)
+![timer](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/timer.p.png)  
+  
+public static Observable<java.lang.Long> timer(long delay,
+                               java.util.concurrent.TimeUnit unit)  
+  
+延迟delay个时间间隔后发送一次Item  
+  
+![timer](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/timer.png) 
+  
+
+##zip
+public static <R> Observable<R> zip(java.lang.Iterable<? extends Observable<?>> ws,
+                    FuncN<? extends R> zipFunction)  
+  
+将多个Observable通过zipFunction压缩成一个Observable
+
+![zip](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/zip.png)  
+  
+public static <R> Observable<R> zip(Observable<? extends Observable<?>> ws,
+                    FuncN<? extends R> zipFunction)  
+  
+将一个发射多个Observable的Observable通过zipFunction压缩成一个只发送不是Observable类型的元素  
+  
+![zip](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/zip.o.png)
