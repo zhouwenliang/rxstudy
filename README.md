@@ -245,3 +245,11 @@ public final <R> Observable<R> cast(java.lang.Class<R> klass)
 将当前Observable的所有元素转化成指定的class类型  
   
 ![cast](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/cast.png) 
+  
+##collect
+public final <R> Observable<R> collect(Func0<R> stateFactory,
+                        Action2<R,? super T> collector)
+  
+将发送的元素通过collector收集起来，与下一个发送的元素结合，最后发送一个集合  
+  
+![](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/collect.png)
