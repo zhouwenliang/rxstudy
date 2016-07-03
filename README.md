@@ -184,3 +184,44 @@ public final Observable<T> ambWith(Observable<? extends T> t1)
   
 ![ambWith](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/amb.png)
 
+##buffer
+public final <TClosing> Observable<java.util.List<T>> buffer(Func0<? extends Observable<? extends TClosing>> bufferClosingSelector)  
+  
+将一个发射多个元素的Observable拆分成多个发送元素List的Observable，拆分的方法由参数中bufferClosingSelector方法返回的Observable决定  
+  
+![buffer](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/buffer1.png)  
+  
+public final Observable<java.util.List<T>> buffer(int count) 
+  
+将一个发射多个元素的Observable拆分成多个发送元素List的Observable，按照传入的数量进行拆分 
+  
+![buffer](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/buffer3.png) 
+  
+public final Observable<java.util.List<T>> buffer(int count,
+                                   int skip)  
+  
+将一个发射多个元素的Observable拆分成多个发送元素List的Observable，按照传入的数量进行拆分，每拆分一次，则跳过拆分开始后的第skip个元素  
+  
+![buffer](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/buffer4.png)  
+  
+public final Observable<java.util.List<T>> buffer(long timespan,
+                                   long timeshift,
+                                   java.util.concurrent.TimeUnit unit)  
+  
+将一个发射多个元素的Observable拆分成多个发送元素List的Observable，按timespan的时间间隔进行拆分，拆分完后等待timeshift时间再进行下一次拆分，这段时间内发射的元素将会被抛弃,拆分的时间内没有元素则发送一个空List
+  
+![buffer](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/buffer7.png)  
+  
+public final Observable<java.util.List<T>> buffer(long timespan,
+                                   java.util.concurrent.TimeUnit unit,
+                                   int count)  
+  
+将一个发射多个元素的Observable拆分成多个发送元素List的Observable，按timespan的时间间隔进行拆分，并且拆分后的最大个数限定为count个，如果当前元素超过两个，则超过的那元素则在下个timespan发射一个单独的List，如果timespan不满两个且上一个timespan没有剩下的元素，则在当前timespan开始时发射一个空的List。如果timespan不满两个且上一个timespan有剩下的元素，则在当前timespan结束时发射一个空的List。在所有timespan结束后也发一个空的List。
+  
+![buffer](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/buffer6.png) 
+  
+public final <TOpening,TClosing> Observable<java.util.List<T>> buffer(Observable<? extends TOpening> bufferOpenings, Func1<? super TOpening,? extends Observable<? extends TClosing>> bufferClosingSelector)  
+  
+将一个发射多个元素的Observable拆分成多个发送元素List的Observable，拆分的开始由bufferOpenings的Observable决定，拆分的结束由bufferClosingSelector的Observable决定  
+  
+![buffer](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/buffer2.png) 
