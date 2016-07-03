@@ -238,3 +238,10 @@ public final Observable<T> cache()
 订阅前已经发送过的元素在订阅后也会发射  
   
 ![cache](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/cache.png) 
+  
+##cast  
+public final <R> Observable<R> cast(java.lang.Class<R> klass)  
+  
+将当前Observable的所有元素转化成指定的class类型  
+  
+![cast](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/cast.png) 
