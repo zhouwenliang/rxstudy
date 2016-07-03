@@ -268,5 +268,12 @@ public final Observable<T> concatWith(Observable<? extends T> t1)
   
 ![concatWith](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/concat.png)  
   
+##contains  
+public final Observable<java.lang.Boolean> contains(java.lang.Object element)  
+  
+检查当前Observable中是否包含某元素  
+  
+![contains](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/contains.png)  
+  
   
   
