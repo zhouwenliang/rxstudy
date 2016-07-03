@@ -168,4 +168,13 @@ public static <R> Observable<R> zip(Observable<? extends Observable<?>> ws,
   
 将一个发射多个Observable的Observable通过zipFunction压缩成一个只发送不是Observable类型的元素  
   
-![zip](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/zip.o.png)
+![zip](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/zip.o.png)  
+  
+##all
+public final Observable<java.lang.Boolean> all(Func1<? super T,java.lang.Boolean> predicate)  
+  
+将当前的Observable发出的元素通过predicate方法判断是否符合条件，返回Observable<java.lang.Boolean>类型，全部正确则为true，否则为false  
+  
+![all](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/all.png)  
+  
+
