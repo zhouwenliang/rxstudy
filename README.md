@@ -302,3 +302,18 @@ public final Observable<T> defaultIfEmpty(T defaultValue)
 如果当前Observable为empty的话，则发送一个默认值  
   
 ![defaultIfEmpty](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/defaultIfEmpty.png) 
+  
+##delay
+public final <U,V> Observable<T> delay(Func0<? extends Observable<U>> subscriptionDelay,
+                        Func1<? super T,? extends Observable<V>> itemDelay)  
+  
+订阅这个Observable时延迟一段时间才生效，订阅延迟时间由subscriptionDelay发送的时间决定，Item的延迟由itemDelay发送的时间决定
+  
+![delay](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/delay.oo.png) 
+  
+public final Observable<T> delay(long delay,
+                  java.util.concurrent.TimeUnit unit)  
+  
+这个Observable的元素整体延迟delay个时间间隔发送  
+ 
+![delay](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/delay.png) 
