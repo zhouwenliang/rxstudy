@@ -252,7 +252,7 @@ public final <R> Observable<R> collect(Func0<R> stateFactory,
   
 将发送的元素通过collector收集起来，与下一个发送的元素结合，最后发送一个集合  
   
-![](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/collect.png)  
+![collect](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/collect.png)  
   
 ##concatMap  
 public final <R> Observable<R> concatMap(Func1<? super T,? extends Observable<? extends R>> func)  
@@ -295,3 +295,10 @@ public final Observable<T> debounce(long timeout,
 过timeout时间后才发射元素，如果在timeout时间内有另外一个元素，则取消上一个的发送及timeout，重新发送一个timeount  
   
 ![debounce](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/debounce.png) 
+  
+##defaultIfEmpty 
+public final Observable<T> defaultIfEmpty(T defaultValue)  
+  
+如果当前Observable为empty的话，则发送一个默认值  
+  
+![defaultIfEmpty](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/defaultIfEmpty.png) 
