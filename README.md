@@ -282,3 +282,16 @@ public final Observable<java.lang.Integer> count()
   
 ![count](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/count.png) 
   
+##debounce
+public final <U> Observable<T> debounce(Func1<? super T,? extends Observable<U>> debounceSelector)  
+  
+当前Observable发出的元素都经过debounceSelector转化成一个Observable<U>类型，并根据转化后的U类型进行发送，如果转化后的Observable的生命周期有重叠，则前面那个Observable不发送  
+  
+![debounce](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/debounce.f.png) 
+  
+public final Observable<T> debounce(long timeout,
+                     java.util.concurrent.TimeUnit unit)  
+  
+过timeout时间后才发射元素，如果在timeout时间内有另外一个元素，则取消上一个的发送及timeout，重新发送一个timeount  
+  
+![debounce](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/debounce.png) 
