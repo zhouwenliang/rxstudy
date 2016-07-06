@@ -317,3 +317,17 @@ public final Observable<T> delay(long delay,
 这个Observable的元素整体延迟delay个时间间隔发送  
  
 ![delay](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/delay.png) 
+
+##delaySubscription
+public final <U> Observable<T> delaySubscription(Func0<? extends Observable<U>> subscriptionDelay)  
+  
+延迟订阅，调用调阅后等subscriptionDelay发送元素后才真正订阅  
+  
+![delaySubscription](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/delaySubscription.o.png) 
+  
+##dematerialize  
+public final <T2> Observable<T2> dematerialize() 
+  
+将当前Observable<Notification<T>>类型的Observable还原为对应的Observable<T>  
+  
+![dematerialize](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/dematerialize.png) 
