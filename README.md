@@ -365,4 +365,10 @@ public final Observable<T> doOnCompleted(Action0 onCompleted)
   
 ![doOnCompleted](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/doOnCompleted.png)
 
-
+##doOnEach  
+public final Observable<T> doOnEach(Action1<Notification<? super T>> onNotification) 
+public final Observable<T> doOnEach(Observer<? super T> observer) 
+  
+对当前Observable的生命周期(onNext,onCompleted,onError)进行监听，作为参数调用onNotification 或 observer相对应的生命周期
+  
+![doOnEach](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/doOnEach.png)
