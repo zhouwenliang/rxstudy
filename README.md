@@ -358,4 +358,11 @@ public final <U> Observable<T> distinctUntilChanged(Func1<? super T,? extends U>
   
 ![distinctUntilChanged](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/distinctUntilChanged.key.png) 
   
+##doOnCompleted
+public final Observable<T> doOnCompleted(Action0 onCompleted)  
+  
+在发送完所有元素后调用onCompleted方法  
+  
+![doOnCompleted](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/doOnCompleted.png)
+
 
