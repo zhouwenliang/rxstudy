@@ -341,6 +341,21 @@ public final Observable<T> distinct()
   
 public final <U> Observable<T> distinct(Func1<? super T,? extends U> keySelector)  
   
-每个元素都会经过keySelector返回一个Key，看返回的Key是否相等进行过滤  
+每个元素都会经过keySelector返回一个Key，根据返回的Key是否相等进行过滤  
   
 ![distinct](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/distinct.key.png) 
+  
+##distinctUntilChanged  
+public final Observable<T> distinctUntilChanged()  
+  
+过滤重复过滤的元素  
+  
+![distinctUntilChanged](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/distinctUntilChanged.png) 
+  
+public final <U> Observable<T> distinctUntilChanged(Func1<? super T,? extends U> keySelector)  
+  
+每个元素都会经过keySelector返回一个Key，过滤掉Key相等且连续的元素  
+  
+![distinctUntilChanged](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/distinctUntilChanged.key.png) 
+  
+
