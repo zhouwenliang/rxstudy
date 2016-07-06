@@ -331,3 +331,16 @@ public final <T2> Observable<T2> dematerialize()
 将当前Observable<Notification<T>>类型的Observable还原为对应的Observable<T>  
   
 ![dematerialize](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/dematerialize.png) 
+  
+##distinct  
+public final Observable<T> distinct()  
+  
+去掉当前Observable中的重复元素 
+  
+![distinct](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/distinct.png) 
+  
+public final <U> Observable<T> distinct(Func1<? super T,? extends U> keySelector)  
+  
+每个元素都会经过keySelector返回一个Key，看返回的Key是否相等进行过滤  
+  
+![distinct](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/distinct.key.png) 
