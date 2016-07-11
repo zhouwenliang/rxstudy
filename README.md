@@ -422,3 +422,10 @@ public final Observable<T> elementAtOrDefault(int index,
 发送index为参数中的index的的元素，若不存在则发送defaultValue  
   
 ![elementAtOrDefault](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/elementAtOrDefault.png) 
+  
+##exists  
+public final Observable<java.lang.Boolean> exists(Func1<? super T,java.lang.Boolean> predicate)  
+  
+通过predicate判断Observable中是否包含某个元素(或符合某个条件)，如果有则返回True的Observable，否则返回False的Observable  
+  
+![exists](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/exists.png) 
