@@ -386,3 +386,10 @@ public final Observable<T> doOnNext(Action1<? super T> onNext)
 在发送每个元素的时候调用onNext方法  
   
 ![doOnNext](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/doOnNext.png)  
+  
+##doOnSubscribe  
+public final Observable<T> doOnSubscribe(Action0 subscribe)  
+  
+在当前Observable被subscrible的时候执行subscribe方法  
+  
+![doOnSubscribe](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/doOnSubscribe.png)  
