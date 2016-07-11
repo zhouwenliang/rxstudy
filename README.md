@@ -411,8 +411,14 @@ public final Observable<T> doOnUnsubscribe(Action0 unsubscribe)
 ##elementAt  
 public final Observable<T> elementAt(int index)  
   
-只发送index为2的元素  
+只发送index为参数中的index的的元素  
   
 ![elementAt](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/elementAt.png) 
   
-
+##elementAt
+public final Observable<T> elementAtOrDefault(int index,
+                               T defaultValue)  
+  
+发送index为参数中的index的的元素，若不存在则发送defaultValue  
+  
+![elementAtOrDefault](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/elementAtOrDefault.png) 
