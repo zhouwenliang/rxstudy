@@ -372,3 +372,17 @@ public final Observable<T> doOnEach(Observer<? super T> observer)
 对当前Observable的生命周期(onNext,onCompleted,onError)进行监听，作为参数调用onNotification 或 observer相对应的生命周期
   
 ![doOnEach](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/doOnEach.png)
+  
+##doOnError  
+public final Observable<T> doOnError(Action1<java.lang.Throwable> onError)  
+  
+在发送错误的时候调用onError方法  
+  
+![doOnError](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/doOnError.png)  
+  
+#doOnNext
+public final Observable<T> doOnNext(Action1<? super T> onNext)  
+  
+在发送每个元素的时候调用onNext方法  
+  
+![doOnNext](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/doOnNext.png)  
