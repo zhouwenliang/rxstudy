@@ -392,4 +392,27 @@ public final Observable<T> doOnSubscribe(Action0 subscribe)
   
 在当前Observable被subscrible的时候执行subscribe方法  
   
-![doOnSubscribe](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/doOnSubscribe.png)  
+![doOnSubscribe](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/doOnSubscribe.png) 
+  
+##doOnTerminate
+public final Observable<T> doOnTerminate(Action0 onTerminate)  
+  
+当Observable在onCompleted的时候调用onTerminate方法  
+  
+![doOnTerminate](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/doOnSubscribe.png) 
+  
+##doOnUnsubscribe  
+public final Observable<T> doOnUnsubscribe(Action0 unsubscribe)  
+  
+在Observable被unsubscribe时调用unsubscribe方法  
+  
+![doOnUnsubscribe](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/doOnUnsubscribe.png) 
+  
+##elementAt  
+public final Observable<T> elementAt(int index)  
+  
+只发送index为2的元素  
+  
+![elementAt](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/elementAt.png) 
+  
+
