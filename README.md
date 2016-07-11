@@ -429,3 +429,9 @@ public final Observable<java.lang.Boolean> exists(Func1<? super T,java.lang.Bool
 通过predicate判断Observable中是否包含某个元素(或符合某个条件)，如果有则返回True的Observable，否则返回False的Observable  
   
 ![exists](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/exists.png) 
+  
+##filter
+public final Observable<T> filter(Func1<? super T,java.lang.Boolean> predicate)  
+  
+通过predicate过滤符合条件的元素
+![filter](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/filter.png) 
