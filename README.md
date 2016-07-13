@@ -451,3 +451,15 @@ public final Observable<T> doAfterTerminate(Action0 action)
   
 ![doAfterTerminate](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/finallyDo.png) 
   
+##first  
+public final Observable<T> first()  
+  
+只发送第一个元素  
+  
+![first](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/first.png) 
+  
+public final Observable<T> first(Func1<? super T,java.lang.Boolean> predicate)  
+  
+只发送第一个符合predicate条件的元素
+  
+![first](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/firstN.png) 
