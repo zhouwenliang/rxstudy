@@ -433,5 +433,13 @@ public final Observable<java.lang.Boolean> exists(Func1<? super T,java.lang.Bool
 ##filter
 public final Observable<T> filter(Func1<? super T,java.lang.Boolean> predicate)  
   
-通过predicate过滤符合条件的元素
+通过predicate过滤符合条件的元素  
+  
 ![filter](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/filter.png) 
+  
+##finallyDo
+public final Observable<T> finallyDo(Action0 action)  
+  
+在onCompeleted之后执行action方法  
+  
+![finallyDo](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/finallyDo.png) 
