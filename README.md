@@ -443,3 +443,11 @@ public final Observable<T> finallyDo(Action0 action)
 在onCompeleted之后执行action方法  
   
 ![finallyDo](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/finallyDo.png) 
+  
+##doAfterTerminate  
+public final Observable<T> doAfterTerminate(Action0 action)  
+  
+在onCompeleted之后执行action方法 
+  
+![doAfterTerminate](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/finallyDo.png) 
+  
