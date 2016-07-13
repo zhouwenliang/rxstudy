@@ -463,3 +463,10 @@ public final Observable<T> first(Func1<? super T,java.lang.Boolean> predicate)
 只发送第一个符合predicate条件的元素
   
 ![first](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/firstN.png) 
+  
+##firstOrDefault  
+public final Observable<T> firstOrDefault(T defaultValue)  
+  
+发送一个元素，没有元素就发送默认值defaultValue  
+  
+![firstOrDefault](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/firstOrDefault.png) 
