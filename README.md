@@ -470,3 +470,12 @@ public final Observable<T> firstOrDefault(T defaultValue)
 发送一个元素，没有元素就发送默认值defaultValue  
   
 ![firstOrDefault](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/firstOrDefault.png) 
+  
+##flatMap  
+public final <R> Observable<R> flatMap(Func1<? super T,? extends Observable<? extends R>> func)  
+  
+将当前Observable中的每个元素通过func转化成Observable<? extends R>类型，并按顺序发出转化后的Observable中的每个元素  
+  
+![flatMap](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/flatMap.png) 
+  
+
