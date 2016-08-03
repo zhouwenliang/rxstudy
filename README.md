@@ -478,4 +478,10 @@ public final <R> Observable<R> flatMap(Func1<? super T,? extends Observable<? ex
   
 ![flatMap](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/flatMap.png) 
   
+##flatMapIterable  
+public final <R> Observable<R> flatMapIterable(Func1<? super T,? extends java.lang.Iterable<? extends R>> collectionSelector)  
+  
+将当前Observable中的每个元素通过collectionSelector转化成Iterable对象，并依次发出Iterable中的元素  
+  
+![flatMapIterable](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/mergeMapIterable.png) 
 
