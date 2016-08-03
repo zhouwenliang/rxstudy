@@ -484,4 +484,10 @@ public final <R> Observable<R> flatMapIterable(Func1<? super T,? extends java.la
 将当前Observable中的每个元素通过collectionSelector转化成Iterable对象，并依次发出Iterable中的元素  
   
 ![flatMapIterable](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/mergeMapIterable.png) 
-
+  
+##groupBy  
+public final <K> Observable<GroupedObservable<K,T>> groupBy(Func1<? super T,? extends K> keySelector)  
+  
+将当前Observable中具有相同特征的元素组合成一个Observable，是否有相同特征由keySelector决定  
+  
+![groupBy](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/groupBy.png) 
