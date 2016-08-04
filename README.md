@@ -499,3 +499,10 @@ public final Observable<T> ignoreElements()
   
 ![ignoreElements](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/ignoreElements.png) 
   
+##isEmpty
+public final Observable<java.lang.Boolean> isEmpty()  
+  
+当前Observable中含有元素就返回true,否则返回false
+  
+![isEmpty](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/isEmpty.png) 
+  
