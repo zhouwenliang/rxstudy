@@ -491,3 +491,11 @@ public final <K> Observable<GroupedObservable<K,T>> groupBy(Func1<? super T,? ex
 将当前Observable中具有相同特征的元素组合成一个Observable，是否有相同特征由keySelector决定  
   
 ![groupBy](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/groupBy.png) 
+  
+##ignoreElements  
+public final Observable<T> ignoreElements()  
+  
+忽略Observable中的所有元素  
+  
+![ignoreElements](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/ignoreElements.png) 
+  
