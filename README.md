@@ -506,3 +506,12 @@ public final Observable<java.lang.Boolean> isEmpty()
   
 ![isEmpty](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/isEmpty.png) 
   
+##join  
+public final <TRight,TLeftDuration,TRightDuration,R> Observable<R> join(Observable<TRight> right,
+                                                         Func1<T,Observable<TLeftDuration>> leftDurationSelector,
+                                                         Func1<TRight,Observable<TRightDuration>> rightDurationSelector,
+                                                         Func2<T,TRight,R> resultSelector)  
+  
+当前Observable与另外一个Observable融合  
+  
+![join](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/join_.png) 
