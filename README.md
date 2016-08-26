@@ -522,3 +522,10 @@ public final Observable<T> last()
 返回Observable最后一个元素，如果没有，则抛出NoSuchElementException  
   
 ![last](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/last.png) 
+  
+##lastOrDefault  
+public final Observable<T> lastOrDefault(T defaultValue)  
+  
+返回Observable最后一个元素，如果没有，则返回defaultValue  
+  
+![lastOrDefault](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/lastOrDefault.png)
