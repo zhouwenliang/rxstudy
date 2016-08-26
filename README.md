@@ -550,3 +550,11 @@ public final Observable<Notification<T>> materialize()
 将Observable中的元素转化成Notification<T>类型发射  
   
 ![materialize](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/materialize.png) 
+  
+##mergeWith  
+public final Observable<T> mergeWith(Observable<? extends T> t1)  
+  
+将当前Observable与另一个合并，合并的终点是这个Observable被订阅  
+  
+![mergeWith](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/merge.png) 
+  
