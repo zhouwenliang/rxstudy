@@ -543,3 +543,10 @@ public final <R> Observable<R> map(Func1<? super T,? extends R> func)
 将Observable发送的元素作类型转换  
   
 ![map](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/map.png) 
+  
+##materialize  
+public final Observable<Notification<T>> materialize()  
+  
+将Observable中的元素转化成Notification<T>类型发射  
+  
+![materialize](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/materialize.png) 
