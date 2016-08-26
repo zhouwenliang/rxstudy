@@ -515,3 +515,10 @@ public final <TRight,TLeftDuration,TRightDuration,R> Observable<R> join(Observab
 当前Observable与另外一个Observable融合  
   
 ![join](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/join_.png) 
+  
+##last  
+public final Observable<T> last()  
+  
+返回Observable最后一个元素，如果没有，则抛出NoSuchElementException  
+  
+![last](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/last.png) 
