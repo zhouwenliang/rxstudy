@@ -528,4 +528,18 @@ public final Observable<T> lastOrDefault(T defaultValue)
   
 返回Observable最后一个元素，如果没有，则返回defaultValue  
   
-![lastOrDefault](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/lastOrDefault.png)
+![lastOrDefault](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/lastOrDefault.png)  
+  
+##limit  
+public final Observable<T> limit(int count)  
+  
+限定Observable的元素个数  
+  
+![limit](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/take.png) 
+  
+##map  
+public final <R> Observable<R> map(Func1<? super T,? extends R> func)  
+  
+将Observable发送的元素作类型转换  
+  
+![map](https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/map.png) 
